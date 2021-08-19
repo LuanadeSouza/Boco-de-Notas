@@ -4,7 +4,7 @@ O aplicativo consiste em 4 fluxos diferentes:
 
 Tarefa : O usuário pode adicinar suas tarefas.
 
-Detalhe da tarefa : o usuário pode visualizar detalhes e editar suas tarefas.
+Detalhe da tarefa : o usuário pode visualizar detalhes, status e editar suas tarefas.
 
 Menu : o usuário pode visualizar sua lista de tarefas, ordenar e ver o percentual de duas tarefas concluidas e em aberto .
 
