@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/drawer_item_color.xml" value="0.34629629629629627" />
+        <entry key="app/src/main/res/drawable-v24/fundo_gradiente.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_add.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_assignment_turned_in_24dp.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_check_circle_96dp.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_done.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_edit.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_statistics.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable-v24/ic_statistics_100dp.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable-v24/ic_statistics_24dp.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable-v24/ic_verified_user_96dp.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable-v24/list_completed_touch_feedback.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable-v24/touch_feedback.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/font/opensans_font.xml" value="0.3882051282051282" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/addtask_frag.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/list.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/list_item_nota.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/nota_detail_fragment.xml" value="0.20364583333333333" />
+        <entry key="app/src/main/res/layout/nota_detailragment_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/nota_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/statistics_frag.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/task_item.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/taskdetail_frag.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/tasks_act.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/tasks_frag.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/drawer_actions.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/filter_tasks.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/taskdetail_fragment_menu.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/tasks_fragment_menu.xml" value="0.3640625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3537037037037037" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
