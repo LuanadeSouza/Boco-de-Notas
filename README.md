@@ -1,6 +1,6 @@
 # Boco-de-Notas
 
-O aplicativo consiste em 4 fluxos diferentes:
+O aplicativo consiste em fluxos diferentes:
 
 Tarefa : O usuário pode adicinar suas tarefas.
 
