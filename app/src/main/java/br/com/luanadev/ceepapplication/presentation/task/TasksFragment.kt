@@ -13,6 +13,7 @@ import br.com.luanadev.ceepapplication.databinding.TasksFragBinding
 import br.com.luanadev.ceepapplication.util.getViewModelFactory
 import br.com.luanadev.ceepapplication.util.setupRefreshLayout
 import br.com.luanadev.ceepapplication.util.setupSnackbar
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
@@ -23,7 +24,9 @@ class TasksFragment : Fragment() {
 
     private val args: TasksFragmentArgs by navArgs()
 
-    private lateinit var viewDataBinding: TasksFragBinding
+    private val binding by viewBinding {
+        TasksFragBinding.inflate(layoutInflater)
+    }
 
     private lateinit var listAdapter: TasksAdapter
 
@@ -31,13 +34,7 @@ class TasksFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        viewDataBinding = TasksFragBinding.inflate(inflater, container, false).apply {
-            viewmodel = viewModel
-        }
-        setHasOptionsMenu(true)
-        return viewDataBinding.root
-    }
+    ) = binding.root
 
     override fun onOptionsItemSelected(item: MenuItem) =
         when (item.itemId) {
@@ -62,12 +59,13 @@ class TasksFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.viewmodel = viewModel
+        setHasOptionsMenu(true)
         // Set the lifecycle owner to the lifecycle of the view
-        viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
+        binding.lifecycleOwner = this.viewLifecycleOwner
         setupSnackbar()
         setupListAdapter()
-        setupRefreshLayout(viewDataBinding.refreshLayout, viewDataBinding.tasksList)
+        setupRefreshLayout(binding.refreshLayout, binding.tasksList)
         setupNavigation()
         setupFab()
     }
@@ -130,10 +128,10 @@ class TasksFragment : Fragment() {
     }
 
     private fun setupListAdapter() {
-        val viewModel = viewDataBinding.viewmodel
+        val viewModel = binding.viewmodel
         if (viewModel != null) {
             listAdapter = TasksAdapter(viewModel)
-            viewDataBinding.tasksList.adapter = listAdapter
+            binding.tasksList.adapter = listAdapter
         } else {
             Timber.w("ViewModel not initialized when attempting to set up adapter.")
         }

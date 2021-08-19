@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "br.com.luanadev.ceepapplication"
-        minSdk 22
+        minSdk 21
         targetSdk 30
         versionCode 1
         versionName "1.0"

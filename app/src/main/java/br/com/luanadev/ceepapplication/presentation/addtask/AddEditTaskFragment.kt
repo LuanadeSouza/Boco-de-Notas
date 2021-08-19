@@ -9,17 +9,19 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.luanadev.ceepapplication.EventObserver
-import br.com.luanadev.ceepapplication.R
 import br.com.luanadev.ceepapplication.databinding.AddtaskFragBinding
 import br.com.luanadev.ceepapplication.presentation.task.ADD_EDIT_RESULT_OK
 import br.com.luanadev.ceepapplication.util.getViewModelFactory
 import br.com.luanadev.ceepapplication.util.setupRefreshLayout
 import br.com.luanadev.ceepapplication.util.setupSnackbar
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.snackbar.Snackbar
 
 class AddEditTaskFragment : Fragment() {
 
-    private lateinit var viewDataBinding: AddtaskFragBinding
+    private val binding by viewBinding {
+        AddtaskFragBinding.inflate(layoutInflater)
+    }
 
     private val args: AddEditTaskFragmentArgs by navArgs()
 
@@ -29,21 +31,15 @@ class AddEditTaskFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val root = inflater.inflate(R.layout.addtask_frag, container, false)
-        viewDataBinding = AddtaskFragBinding.bind(root).apply {
-            this.viewmodel = viewModel
-        }
-        // Set the lifecycle owner to the lifecycle of the view
-        viewDataBinding.lifecycleOwner = this.viewLifecycleOwner
-        return viewDataBinding.root
-    }
+    ) = binding.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupSnackbar()
         setupNavigation()
-        this.setupRefreshLayout(viewDataBinding.refreshLayout)
+        binding.viewmodel = viewModel
+        binding.lifecycleOwner = this.viewLifecycleOwner
+        this.setupRefreshLayout(binding.refreshLayout)
         viewModel.start(args.taskId)
     }
 
@@ -54,7 +50,7 @@ class AddEditTaskFragment : Fragment() {
     private fun setupNavigation() {
         viewModel.taskUpdatedEvent.observe(viewLifecycleOwner, EventObserver {
             val action = AddEditTaskFragmentDirections
-                .actionAddEditTaskFragmentToTasksFragment(ADD_EDIT_RESULT_OK)
+                .actionAddEditTaskFragmentToTasksFragment()
             findNavController().navigate(action)
         })
     }

@@ -9,11 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CeepApplication">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".presentation.task.TasksActivity"
             android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme.CeepApplication">
+            android:theme="@style/AppTheme.OverlapSystemBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
